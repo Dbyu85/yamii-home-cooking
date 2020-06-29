@@ -1,26 +1,30 @@
 import pymongo
 import os
 from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo 
-from bson.objectid import ObjectId 
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
+
 
 app = Flask(__name__)
 
 MONGODB_URI = os.getenv("MONGO_URI")
-DBS_NAME ="yamiiHomeCooking"
-COLLECTION_NAME = "category", "recipes"
+DBS_NAME = "yamiiHomeCooking"
+COLLECTION_NAME = "category"
+# "recipes"
 
 
 app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
-def mongo_connect("url"):
+
+def mongo_connect(url):
     try:
         conn = pymongo.MongoClient(url)
         print("mongo")
         return conn
     except pymongo.error.Connectionfailure as e:
         print('error: %s') % e
+
 
 conn = mongo_connect(MONGODB_URI)
 
@@ -29,7 +33,7 @@ coll = conn[DBS_NAME][COLLECTION_NAME]
 documents = coll.find()
 
 for doc in documents:
-    print (doc)
+    print(doc)
 
 
 
