@@ -10,13 +10,13 @@ app = Flask(__name__)
 MONGODB_URI = os.getenv("MONGO_URI")
 DBS_NAME = "yamiiHomeCooking"
 COLLECTION_NAME = "category"
-# "recipes"
+# " collection_name 2 = recipes"
 
 
 app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
-
+# Mongo DB connection function.
 def mongo_connect(url):
     try:
         conn = pymongo.MongoClient(url)
@@ -38,7 +38,7 @@ for doc in documents:
 
 
 
-#default route. 
+# default route. 
 @app.route('/')
 def index():
     return render_template('index.html')
