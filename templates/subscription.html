@@ -1,16 +1,28 @@
-{% extends 'base.html' %} {% block content %}
-<section class="signup-section" id="signup">
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="page-section clearfix">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-lg-8 mx-auto text-center">
-				<i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-				<h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-				<form class="form-inline d-flex">
-					<input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
-					<button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
-				</form>
+		<div class="intro">
+			<img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static', filename='img/edgar-castrejon-bG5rhvRH0JM-unsplash.jpg') }}" alt="Kitchen">
+			<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+				<h2 class="section-heading mb-4">
+					<span class="section-heading-upper">Subscribe to receive updates!</span>
+				</h2>
+				<p class="mb-3">Be the first to get our news, explore new ideas and enjoy new recipe from around the
+					world!
+				</p>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="signup-section" id="signup">
+	<div class="container">
+		<form class="form-inline d-flex">
+			<input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
+			<button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
+		</form>
 	</div>
 </section>
 {% endblock %}

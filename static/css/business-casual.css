@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Lora';
-  background-color: #663416 ;
+  background-color: #672202;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -51,7 +51,7 @@ p {
 
 .page-section {
   margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .section-heading {
@@ -66,7 +66,7 @@ p {
 
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 100;
 }
 
@@ -86,6 +86,24 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
+}
+
+.image-presentation{
+    width: 70px;
+    height: 50px;
+    padding: 12px 0;
+}
+
+.social-links li a i{ 
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height:7px;
+    text-align:center;
+    color:#672202; 
+    background-color:#e6a756;
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -128,7 +146,7 @@ p {
     margin-top: 3rem;
     position: absolute;
   }
-  .intro .intro-text {
+  .intro .intro-text .intro-button {
     width: 100%;
     left: 0;
     position: absolute;
@@ -233,7 +251,9 @@ p {
   color: #e6a756 !important;
 }
 
-
+.bg-primary {
+  background-color: #e6a756 !important;
+}
 
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);

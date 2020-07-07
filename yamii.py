@@ -10,7 +10,7 @@ app = Flask(__name__)
 MONGODB_URI = os.getenv("MONGO_URI")
 DBS_NAME = "yamiiHomeCooking"
 COLLECTION_NAME = "category"
-# " collection_name 2 = recipes"
+# " collection_name = recipes, galleria"
 
 
 app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
@@ -50,6 +50,18 @@ def recipes():
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('add_recipe.html', recipes=mongo.db.recipes.find(), category=mongo.db.category.find())
+
+@app.route('/load_image')
+def load_image():
+    if 'recipe_image' in request.files:
+        recipe_image = request.files['recipe_image']
+        mongo.save_file(recipe_image.filename, recipe_image)
+    return render_template('add_recipe.html', recipe=mongo.db.recipes.find())
+
+@app.route('/image/<recipe_image>')
+def image():
+    return mongo.send_file(recipe_image)
+
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
