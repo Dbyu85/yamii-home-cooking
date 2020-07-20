@@ -31,7 +31,9 @@
                     class="btn waves-effect waves-light"
                     type="submit"
                     name="action">
-                    delete
+                    <a class="text-add-recipe" href="{{url_for('delete_recipe',recipe_id=recipe._id)}}"
+                      >delete</a
+                    >
                   </button>
                   <div class="image-presentation col s4">
                     <img

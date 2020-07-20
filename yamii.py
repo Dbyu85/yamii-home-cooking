@@ -4,19 +4,20 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
-
 app = Flask(__name__)
 
 MONGODB_URI = os.getenv("MONGO_URI")
 DBS_NAME = "yamiiHomeCooking"
 COLLECTION_NAME = "category"
-# " collection_name = recipes, galleria"
 
+# " collection_name = recipes, galleria"
 
 app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 # Mongo DB connection function.
+
+
 def mongo_connect(url):
     try:
         conn = pymongo.MongoClient(url)
@@ -35,10 +36,9 @@ documents = coll.find()
 for doc in documents:
     print(doc)
 
-
-
-
 # default route. 
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -62,8 +62,6 @@ def load_image():
 def image():
     return mongo.send_file(recipe_image)
 
-
-
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
@@ -75,7 +73,23 @@ def edit_recipe(recipe_id):
     _recipe = mongo.db.recipes.find_one({'_id':ObjectId(recipe_id)})
     _category = mongo.db.category.find()
     category_list = [category for category in _category]
-    return render_template('edit_recipe.html', recipe=_recipe, category=category_list)
+    return render_template('edit_recipe.html', recipe =_recipe,category = category_list)
+
+@app.route('/update_recipe/<recipe_id>', methods = ['POST'])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update({'_id':ObjectId(recipe_id)},
+    {
+        'recipe_name':request.form.get('recipe_name'),'category_name':request.form.get('category_name'),
+        'ingredients':request.form.get('ingredients'),
+        'steps':request.form.get('steps')
+    })
+    return redirect(url_for('recipes'))
+
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id':ObjectId(recipe_id)})
+    return redirect(url_for('recipes'))
     
 @app.route('/shop')
 def shop():
