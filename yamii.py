@@ -63,12 +63,20 @@ def image():
     return mongo.send_file(recipe_image)
 
 
+
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('recipes'))
 
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    _recipe = mongo.db.recipes.find_one({'_id':ObjectId(recipe_id)})
+    _category = mongo.db.category.find()
+    category_list = [category for category in _category]
+    return render_template('edit_recipe.html', recipe=_recipe, category=category_list)
+    
 @app.route('/shop')
 def shop():
     return render_template('shop.html')
