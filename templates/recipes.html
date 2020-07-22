@@ -17,7 +17,7 @@
             <li>
               <div class="collapsible-header row">
                 <div class="col s12">
-                  <i class="material-icons">local_dining</i>
+                  <i class="material-icons text-add-recipe">local_dining</i>
                   <button
                     class="btn waves-effect waves-light"
                     type="submit"
@@ -28,11 +28,11 @@
                     >
                   </button>
                   <button
-                    class="btn waves-effect waves-light"
+                    class="btn waves-effect waves-light brown"
                     type="submit"
                     name="action">
-                    <a class="text-add-recipe" href="{{url_for('delete_recipe',recipe_id=recipe._id)}}"
-                      >delete</a
+                    <a class="text-del-recipe" href="{{url_for('delete_recipe',recipe_id=recipe._id)}}"
+                      >del</a
                     >
                   </button>
                   <div class="image-presentation col s4">
@@ -42,18 +42,18 @@
                       class="circle responsive-img"
                     />
                   </div>
-                  <div class="col s6 intro-text capitalize">
-                    <h4 class="capitalize">
+                  <div class="col s6 intro-text uppercase">
+                    <h4 class="">
                       <strong>{{recipe.recipe_name}}</strong>
                     </h4>
                   </div>
-                  <div class="col s2 capitalize">
-                    <span class="capitalize"> {{recipe.category}} </span>
+                  <div class="col s2 uppercase">
+                    <span class=""> {{recipe.category}} </span>
                   </div>
                 </div>
               </div>
 
-              <div class="collapsible-body capitalize">
+              <div class="collapsible-body ">
                 <ul class="capitalize">
                   <li>{{recipe.ingredients}}</li>
                 </ul>
