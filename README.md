@@ -6,7 +6,7 @@ The project purpose is to share and enjoy different home made recipes with the w
 
 ## Showcase
 
-## Project deployment  **[yamii-come-cooking](https://www.heroku.com/yamiiHomeCookin)**
+## Project deployment  **[yamii-home-cooking](https://www.heroku.com/yamiiHomeCookin)**
 
 
 
