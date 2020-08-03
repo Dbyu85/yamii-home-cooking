@@ -47,6 +47,7 @@ def index():
 def recipes():
     return render_template('recipes.html', recipes=mongo.db.recipes.find())
 
+
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('add_recipe.html', recipes=mongo.db.recipes.find(), category=mongo.db.category.find())
