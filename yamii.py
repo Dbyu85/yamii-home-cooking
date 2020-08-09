@@ -95,6 +95,10 @@ def delete_recipe(recipe_id):
 def shop():
     return render_template('shop.html')
 
+@app.route('/shopping_cart')
+def shopping_cart():
+    return render_template('shopping_cart.html')
+
 @app.route('/subscription')
 def subscription():
     return render_template('subscription.html')
