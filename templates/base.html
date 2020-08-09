@@ -29,8 +29,6 @@
     />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
     <title>Yamii Home Cooking</title>
   </head>
 
@@ -41,7 +39,7 @@
       >
       <span class="site-heading-lower">yamii home cooking</span>
     </h1>
-    <!-- Navigation -->
+    <!-- Navigation page-->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
         <button
@@ -101,7 +99,7 @@
     <div class="container-fluid">
       {% block content %} {% endblock %}
     </div>
-
+    <!--Footer section -->
     <footer class="footer text-faded text-center py-5">
       <div class="container">
         <div class="row">
@@ -127,6 +125,13 @@
               >
                 <i class="fa fa-instagram" aria-hidden="true"></i>
                 <span class="sr-only">instagram</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                href="{{ url_for('subscription')}}">
+                <i class="material-icons prefix " aria-hidden="true">contacts</i>
+                <span class="sr-only">contacts</span>
               </a>
             </li>
           </ul>

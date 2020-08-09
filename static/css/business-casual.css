@@ -86,6 +86,16 @@ p {
   font-weight: 100;
 }
 
+.submit-message-button{
+    position: relative;
+}
+.submit-message-button{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: #672202;
+}
+
 .bg-faded {
   background-color: rgba(255, 255, 255, 0.85);
 }

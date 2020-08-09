@@ -2,6 +2,8 @@
 
 ## Yamii Home Cooking,
 
+Milestone3 code Institute
+
 The project purpose is to share and enjoy different home made recipes with the world, to offert few handy Utensils to make the experience of Cooking more exciting.
 
 ## Showcase
