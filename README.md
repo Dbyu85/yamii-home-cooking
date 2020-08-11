@@ -6,7 +6,7 @@ Milestone3 code Institute
 
 ## Showcase
 
-## Project deployment [Heroku](https://yamii-home-cooking.herokuapp.com/)
+## Project deployment [Yamii Home Cooking](https://yamii-home-cooking.herokuapp.com/)
 
 
 
@@ -17,7 +17,8 @@ Milestone3 code Institute
 The project purpose is to share and enjoy different home made recipes with the world, to sale few handy Utensils and to make the experience of Cooking more exciting.
 
 * UX design
-    - UX **UX**
+    - UX  [Mockup](/static/img/UX/IMG_0676.png)
+  
 
 ## Structure
 
