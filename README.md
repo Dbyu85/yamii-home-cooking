@@ -18,8 +18,7 @@ The project purpose is to share and enjoy different home made recipes with the w
     
 ## Structure
 
-* Mockup
-    -![Mock-up](https://github.com/Dbyu85/yamii-home-cooking/tree/master/static/img/Mockup)
+*  ![Mock-up](https://github.com/Dbyu85/yamii-home-cooking/tree/master/static/img/Mockup)
 
 ## Features
 
