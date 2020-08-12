@@ -15,13 +15,11 @@ Milestone3 code Institute
 * Project Purpose
 
 The project purpose is to share and enjoy different home made recipes with the world, to sale few handy Utensils and to make the experience of Cooking more exciting.
+    
+## Structure
 
 * Mockup
-    -![UX design1](https://user-images.githubusercontent.com/50050452/89905106-0622de00-dbea-11ea-8d33-3b6f34f2785d.jpg)
-    -![Mock-up2](https://user-images.githubusercontent.com/50050452/89912665-18ede080-dbf3-11ea-8890-b700516b7544.jpg)
-    -![Mock-up3](https://user-images.githubusercontent.com/50050452/89911974-53a34900-dbf2-11ea-92ea-c46628bd2f23.jpg)
-
-## Structure
+    -![Mock-up](https://github.com/Dbyu85/yamii-home-cooking/tree/master/static/img/Mockup)
 
 ## Features
 
