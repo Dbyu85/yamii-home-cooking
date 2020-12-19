@@ -1,21 +1,14 @@
 <img src="static/img/oleksandr-kurchev-9gtiGV76NnM-unsplash.jpg">
 
-## Yamii Home Cooking,
+# Yamii Home Cooking
+The project purpose is to share and enjoy different home made recipes with the world, to sale few handy Utensils and to make the experience of Cooking more exciting.
 
 Milestone3 code Institute
 
-## Showcase
+# UX
 
 ## Project deployment [Yamii Home Cooking](https://yamii-home-cooking.herokuapp.com/)
 
-
-
-## UX
-
-* Project Purpose
-
-The project purpose is to share and enjoy different home made recipes with the world, to sale few handy Utensils and to make the experience of Cooking more exciting.
-    
 ## Structure
 
 *  ![Mock-up](https://github.com/Dbyu85/yamii-home-cooking/tree/master/static/img/Mockup)
