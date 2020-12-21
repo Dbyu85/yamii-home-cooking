@@ -1,13 +1,14 @@
-<img src="static/img/oleksandr-kurchev-9gtiGV76NnM-unsplash.jpg">
-
 # Yamii Home Cooking
-The project purpose is to share and enjoy different home made recipes with the world, to sale few handy Utensils and to make the experience of Cooking more exciting.
+
+Yamii Home Cooking, is an website where people could share and learn about cooking and how to enjoy **La Cucina** at home all together around the globe,
+The project purpose is to share different home made recipes with the world, to sale few handy Utensils and to make the experience of Cooking more exciting.
+a website with simple steps made of sixs differents sites to interact, with a home site, where we introduce the site with simple words about the purpose and story, recipe site where you can get new.
 
 Milestone3 code Institute
 
 # UX
 
-## Project deployment [Yamii Home Cooking](https://yamii-home-cooking.herokuapp.com/)
+<img src="static/img/oleksandr-kurchev-9gtiGV76NnM-unsplash.jpg">
 
 ## Structure
 
@@ -49,6 +50,7 @@ Milestone3 code Institute
 ## Testing
 
 ## Deployment
+ - Project deployment [Yamii Home Cooking](https://yamii-home-cooking.herokuapp.com/)
 
 ## Credit and Acknowledgements
 
