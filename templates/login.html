@@ -1,0 +1,73 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<section class="page-section cta">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-9 mx-auto">
+				<div class="cta-inner text-center rounded">
+					<h2 class="section-heading mb-4">
+						<span class="section-heading-upper">Log in</span>
+					</h2>
+					<div class="mb-0">
+						<div class="row">
+							 <form class="col s12" method="POST" action="{{ url_for('login')}}">
+                                <div class="row">
+                                    <div class="input-field col s3">
+                                        <input id="username" name="username" type="text" class="validate" required>
+                                        <label for="username">Username</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="password" name="password" type="password" class="validate" required>
+                                        <label for="password">Password</label>
+                                    </div>
+                                    <!-- login -->
+                                    <div class="row">
+                                        <button
+                                            class="btn waves-effect waves-light"
+                                            type="submit">Log in
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                         <!--  -->
+                        <div class="col-xl-9 mx-auto">
+                            <div class="cta-inner text-center rounded">
+                                <p class="center-align">No Member!</p>
+                                <a href="{{ url_for('register')}}" class="">register</a>
+                            </div>
+                        </div>
+                        
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+</section>
+
+   <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img
+                    class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+                    src="{{ url_for('static', filename='img/edgar-castrejon-bG5rhvRH0JM-unsplash.jpg') }}"
+                    alt="Kitchen"
+                />
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper"
+                        >welcome to yamii home cooking!</span
+                    >
+                    </h2>
+                    <p class="mb-3">
+                        Enjoy hundret of home made recipes!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+{% endblock %}

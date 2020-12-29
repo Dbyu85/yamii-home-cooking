@@ -17,7 +17,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
@@ -33,79 +33,97 @@
   </head>
 
   <body>
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3"
+      <header>
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3"
         >lets cook together</span
-      >
-      <span class="site-heading-lower">yamii home cooking</span>
-    </h1>
-    <!-- Navigation page-->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-1">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="{{ url_for('index')}}"
-                >Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item px-lg-1">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="{{ url_for('recipes')}}"
-                >recipes</a
-              >
-            </li>
-            <li class="nav-item px-lg-1">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="{{ url_for('add_recipe')}}"
-                >add recipes</a
-              >
-            </li>
-            <li class="nav-item px-lg-1">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="{{ url_for('shop')}}"
-                >Products</a
-              >
-            </li>
-            <li class="nav-item px-lg-1">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="{{ url_for('shopping_cart')}}"
-                >shopping cart</a
-              >
-            </li>
-            <li class="nav-item px-lg-1">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="{{ url_for('subscription')}}"
-                >login/sign up</a
-              >
-            </li>
-          </ul>
+            >
+            <span class="site-heading-lower">yamii home cooking</span>
+        </h1>
+        <!-- Navigation page-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('index')}}"
+                    >Home
+                    <span class="sr-only">(current)</span>
+                </a>
+                </li>
+                <li class="nav-item px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('recipes')}}"
+                    >recipes</a
+                >
+                </li>
+                <li class="nav-item px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('add_recipe')}}"
+                    >add recipes</a
+                >
+                </li>
+                <li class="nav-item px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('shop')}}"
+                    >Products</a
+                >
+                </li>
+                <li class="nav-item px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('shopping_cart')}}"
+                    >shopping cart</a
+                >
+                </li>
+                <li class="nav-item px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('subscription')}}"
+                    >subscribe/contact</a
+                >
+                </li>
+                <li class="nav-item px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('register')}}"
+                    >register</a
+                >
+                </li>
+                <li class="nav-item px-lg-1">
+                <a
+                    class="nav-link text-uppercase text-expanded"
+                    href="{{ url_for('login')}}"
+                    >log in</a
+                >
+                </li>              
+            </ul>
+            </div>
         </div>
-      </div>
-    </nav>
+        </nav>
+      </header>
+       
+       <!-- Main container-->
+      <main class="container-fluid">
+          {% block content %} {% endblock %}
+      </main>
 
-    <div class="container-fluid">
-      {% block content %} {% endblock %}
-    </div>
     <!--Footer section -->
     <footer class="footer text-faded text-center py-5">
         <!--<div class="row">
@@ -153,7 +171,7 @@
     
     <!-- Materialize script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- extern js file-->
     <script type="text/javascript">
       $(document).ready(function () {

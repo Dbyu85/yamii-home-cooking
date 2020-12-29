@@ -1,26 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
-<!-- Page Header -->
-<section class="page-section clearfix">
-  <div class="container">
-        <div class="intro">
-            <img
-                class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-                src="{{ url_for('static', filename='img/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg') }}"
-                alt="Kitchen"
-            />
-            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">share with the world</span>
-                </h2>
-                <p class="mb-3">
-                Let us connect, share our passion with the world and enjoy an easy
-                homemade recipe!
-                </p>
-            </div>
-        </div>
-  </div>
-</section>
+
 
 <!--Add recipe section -->
 <section class="page-section cta">
@@ -128,5 +108,28 @@
         </div>
   </div>
 </section>
+
+<!-- Page Header -->
+<section class="page-section clearfix">
+  <div class="container">
+        <div class="intro">
+            <img
+                class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+                src="{{ url_for('static', filename='img/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg') }}"
+                alt="Kitchen"
+            />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">share with the world</span>
+                </h2>
+                <p class="mb-3">
+                Let us connect, share our passion with the world and enjoy an easy
+                homemade recipe!
+                </p>
+            </div>
+        </div>
+  </div>
+</section>
+
 
 {% endblock %}

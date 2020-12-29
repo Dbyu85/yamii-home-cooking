@@ -1,165 +1,94 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 
-<!--Subscription field -->
-<section class="page-section clearfix">
-  <div class="container">
-    <div class="intro">
-      <img
-        class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-        src="{{ url_for('static', filename='img/edgar-castrejon-bG5rhvRH0JM-unsplash.jpg') }}"
-        alt="Kitchen"
-      />
-      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-        <h2 class="section-heading mb-4">
-          <span class="section-heading-upper"
-            >Subscribe to receive updates!</span
-          >
-        </h2>
-        <p class="mb-3">
-          Be the first to get our news, explore new ideas and enjoy new recipe
-          from around the world!
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="signup-section" id="signup">
-  <div class="container">
-    <form class="form-inline d-flex">
-      <input
-        class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-        id="inputEmail"
-        type="email"
-        placeholder="Enter email address..."
-      />
-      <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-<section class="page-section cta">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xl-9 mx-auto">
-				<div class="cta-inner text-center rounded">
-					<h2 class="section-heading mb-4">
-						<span class="section-heading-upper">Register</span>
-					</h2>
-					<div class="mb-0">
-						<div class="row">
-							<form class="col s12">
-								<div class="row">
-									<div class="input-field col s6">
-										<input id="first_name" type="text" class="validate">
-										<label for="first_name">First Name</label>
-									</div>
-									<div class="input-field col s6">
-										<input id="last_name" type="text" class="validate">
-										<label for="last_name">Last Name</label>
-									</div>
-								</div>
-								<div class="row">
-									<div class="input-field col s3">
-										<input id="username" type="text" class="validate">
-										<label for="username">Username</label>
-									</div>
-
-
-									<div class="input-field col s6">
-										<input id="password" type="password" class="validate">
-										<label for="password">Password</label>
-									</div>
-
-
-									<div class="input-field col s6">
-										<input id="confirm_password" type="text" class="validate">
-										<label for="confirm_password"> Comfirm Password</label>
-									</div>
-								</div>
-								<div class="row">
-									<div class="input-field col s12">
-										<input id="email" type="email" class="validate">
-										<label for="email">Email</label>
-									</div>
-								</div>
-								<div class="row">
-									<div>
-										<button
-                                            class="btn waves-effect waves-light"
-                                            type="submit"
-                                            name="action">
-                                            <a class="text-add-recipe" href="{{url_for('recipes')}}">login</a>
-                                        </button>
-									</div>
-									<div class="col6">
-										<button
-                                            class="btn waves-effect waves-light"
-                                            type="submit"
-                                            name="action">
-                                            <a class="text-add-recipe" href="{{url_for('recipes')}}">Register</a>
-                                        </button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-</section>
-<!--Contact field-->
-<section class="page-section cta">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xl-9 mx-auto">
-        <div class="cta-inner text-center rounded">
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">Contact Us!</span>
-          </h2>
-          <div class="mb-0">
-            <form class="row">
-              <div class="col s12">
-                <div class="input-field col s6 uppercase submit-message-mail">
-                  <i class="material-icons prefix">mail</i>
-                  <input id="icon_telephone" type="tel" class="validate" />
-                  <label for="icon_telephone">E-mail</label>
-                </div>
-                <div class="input-field col s6 uppercase submit-message-name">
-                  <i class="material-icons prefix">account_circle</i>
-                  <input id="icon_prefix" type="text" class="validate" />
-                  <label for="icon_prefix"> Name</label>
-                </div>
-                <div class="input-field col s12 text-add-recipe">
-                  <div class="form-group">
-                    <textarea
-                      class="form-control validate"
-                      id="help-request"
-                      rows="3"
-                    ></textarea>
-                    <label for="icon_prefix" class="uppercase text-color"
-                      >How can we help!</label
+    <!--Subscription field -->
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img
+                    class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+                    src="{{ url_for('static', filename='img/edgar-castrejon-bG5rhvRH0JM-unsplash.jpg') }}"
+                    alt="Kitchen"
+                />
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper"
+                        >Subscribe to receive updates!</span
                     >
-                  </div>
-                  <div class="row">
-                    <button
-                      class="btn input-field  submit-message-button"
-                      type="submit"
-                      name="action"
-                    >
-                      <a
-                        class="text-add-recipe uppercase"
-                        href="{{url_for('index')}}"
-                        >submit</a
-                      >
-                    </button>
-                  </div>
+                    </h2>
+                    <p class="mb-3">
+                    Be the first to get our news, explore new ideas and enjoy new recipe
+                    from around the world!
+                    </p>
                 </div>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+    <section class="signup-section" id="signup">
+        <div class="container">
+            <form class="form-inline d-flex">
+                <input
+                    class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+                    id="inputEmail"
+                    type="email"
+                    placeholder="Enter email address..."
+                />
+                <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+   
+    <!--Contact field-->
+    <section class="page-section cta">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Contact Us!</span>
+                        </h2>
+                        <div class="mb-0">
+                            <form class="row" method="POST" action="{{ url_for('subscription')}}">
+                                <div class="col s12">
+                                    <div class="input-field col s6 uppercase submit-message-mail">
+                                        <i class="material-icons prefix">mail</i>
+                                        <input id="icon_telephone" type="tel" class="validate"/>
+                                        <label for="icon_telephone">E-mail</label>
+                                    </div>
+                                    <div class="input-field col s6 uppercase submit-message-name">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="icon_prefix" type="text" class="validate"/>
+                                        <label for="icon_prefix"> Name</label>
+                                    </div>
+                                    <div class="input-field col s12 text-add-recipe">
+                                        <div class="form-group">
+                                            <textarea
+                                                class="form-control validate"
+                                                id="help-request"
+                                                rows="3">
+                                            </textarea>
+                                            <label for="icon_prefix" class="uppercase text-color"
+                                                >How can we help!</label>
+                                        </div>
+                                        <div class="row">
+                                            <button
+                                                class="btn input-field  submit-message-button"
+                                                type="submit"
+                                                name="action"
+                                                >
+                                                <a class="text-add-recipe uppercase"
+                                                    href="{{url_for('index')}}"
+                                                >submit</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
