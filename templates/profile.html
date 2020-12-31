@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<section class="page-section cta">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-9 mx-auto">
+				<div class="cta-inner text-center rounded">
+					<div class="mb-0">
+						 <h3 class="section-heading mb-4">
+                            {{username}}´s Profile
+					    </h3>
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+</section>
+
+   <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img
+                    class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+                    src="{{ url_for('static', filename='img/edgar-castrejon-bG5rhvRH0JM-unsplash.jpg') }}"
+                    alt="Kitchen"
+                />
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper"
+                        >welcome to yamii home cooking!</span
+                    >
+                    </h2>
+                    <p class="mb-3">
+                        Enjoy hundret of home made recipes!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+{% endblock %}
