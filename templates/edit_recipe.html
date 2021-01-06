@@ -29,12 +29,12 @@
 			</h1>
 		</div>
 		<div class="row">
-			<form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" enctype="multipart/form-data" class="col s12">
+			<form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" enctype="multipart/form-data" class="col s12">
 				<div class="row">
 					<div class="input-field col s3 text-add-recipe">
 						<i class="material-icons prefix">poll</i>
-						<select id="Category" name="dish-category">
-                            <option value="" disabled selected>Select Category
+						<select id="category_name" name="category_name">
+                            <option value="{{recipe.category_name}}" disabled>Select Category
                             </option>
                             {% for cat in category %} 
                                 {% if cat.category_name == recipe.category_name%}
@@ -42,21 +42,21 @@
                                         >{{cat.category_name}}
                                     </option>
                                 {% else %}
-                                    <option value="{{cat.category_name}}">{             {cat.category_name}
+                                    <option value="{{cat.category_name}}">           {{cat.category_name}}
                                     </option>
                                 {% endif%} 
                             {% endfor %}
                         </select>
-						<label>Category</label>
+						<label for="category_name">Category</label>
 					</div>
 
-					<!-- visual Image for recipe and recipe name field-->
+					<!-- Image field for recipe site-->
 					<div class="input-field col s3 container text-add-recipe">
 						<i class="material-icons prefix">monochrome_photos</i>
 						<input id="recipe_image" name="recipe_image" type="file" />
-						<label for="icon_prefix "></label>
+						<label for="recipe_image "></label>
 					</div>
-					<!--Category field db-->
+					<!--name field -->
 					<div class="input-field col s3 text-add-recipe">
 						<i class="material-icons prefix">local_dining</i>
 						<input
@@ -66,7 +66,7 @@
                         class="validate"
                         value="{{recipe.recipe_name}}"
                         />
-						<label for="icon_prefix">Recipe Name</label>
+						<label for="recipe_name">Recipe Name</label>
 					</div>
 				</div>
 
@@ -76,13 +76,13 @@
 						<div class="input-field col s4 mb-3">
 							<i class="material-icons prefix">shopping_cart</i>
 							<textarea
-                                name="ingridients"
-                                id="ingridients"
+                                name="ingredients"
+                                id="ingredients"
                                 rows="5"
-                                class="validate materialize-textarea"
-                            >{{recipe.ingredients}}
+                                class="validate materialize-textarea" required>
+                                {{- recipe.ingredients -}}
                             </textarea>
-							<label for="icon_prefix">Ingridients</label>
+							<label for="ingredients">Ingredients</label>
 						</div>
 
 						<div class="input-field col s8 text-add-recipe ">
@@ -90,10 +90,10 @@
 							<textarea
                                 name="steps"
                                 id="steps"
-                                class="validate materialize-textarea "
-                            >{{recipe.steps}}
+                                class="validate materialize-textarea" required
+                            >{{- recipe.steps -}}
                             </textarea>
-                            <label for="icon_prefix">Preparation</label>
+                            <label for="steps">Preparation</label>
 						</div>
 					</div>
 				</div>
@@ -120,10 +120,10 @@
 
 				<!-- Submit button-->
 				<div class="row">
+                    
 					<button
                         class="btn waves-effect waves-light"
-                        type="submit"
-                        name="action">
+                        type="submit">
                         <a class="text-add-recipe" href="{{url_for('recipes')}}"
                         >save</a>
                     </button>

@@ -31,12 +31,23 @@ def index():
 @app.route('/recipes')
 def recipes():
     recipes = mongo.db.recipes.find()
-    return render_template('recipes.html', recipes=mongo.db.recipes.find())
+    return render_template('recipes.html', recipes=recipes)
 
 
-@app.route('/add_recipe')
+@app.route('/add_recipe', methods=["GET", "POST"])
 def add_recipe():
-    return render_template('add_recipe.html', recipes=mongo.db.recipes.find(), category=mongo.db.category.find())
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "ingredients": request.form.get("ingredients"),
+            "steps": request.form.get("steps")
+        }
+        mongo.db.recipes.insert_one(recipe)
+        return redirect(url_for("recipes"))
+
+    category = mongo.db.category.find().sort("category_name", 1)
+    return render_template('add_recipe.html', category=category)
 
 
 @app.route('/load_image')
@@ -59,24 +70,20 @@ def insert_recipe():
     return redirect(url_for('recipes'))
 
 
-@app.route('/edit_recipe/<recipe_id>')
+@app.route('/edit_recipe/<recipe_id>', methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    _recipe = mongo.db.recipes.find_one({'_id':ObjectId(recipe_id)})
-    _category = mongo.db.category.find()
-    category_list = [category for category in _category]
-    return render_template('edit_recipe.html', recipe =_recipe, category=category_list)
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "ingredients": request.form.get("ingredients"),
+            "steps": request.form.get("steps")
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
 
-
-@app.route('/update_recipe/<recipe_id>', methods = ['POST'])
-def update_recipe(recipe_id):
-    recipes = mongo.db.recipes
-    recipes.update({'_id':ObjectId(recipe_id)},
-    {
-        'recipe_name':request.form.get('recipe_name'),'category_name':request.form.get('category_name'),
-        'ingredients':request.form.get('ingredients'),
-        'steps':request.form.get('steps')
-    })
-    return redirect(url_for('recipes'))
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    category = mongo.db.category.find().sort("category_name", 1)
+    return render_template('edit_recipe.html',  recipe=recipe, category=category)
 
 
 @app.route('/delete_recipe/<recipe_id>')
@@ -97,6 +104,10 @@ def shopping_cart():
 
 @app.route('/subscription')
 def subscription():
+    return render_template('subscription.html')
+
+@app.route('/contact')
+def contact():
     return render_template('subscription.html')
 
 
@@ -131,7 +142,7 @@ def login():
 
         if existing_user:
             # ensure hashed password match
-            if check_password_hash(existing_user["password"], request.form.get      ("password")):
+            if check_password_hash(existing_user["password"], request.form.get    ("password")):
                     session["user"] = request.form.get("username").lower()
                     return redirect(url_for(
                         "profile", username=session["user"]))

@@ -17,7 +17,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      type="text/css"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
@@ -27,23 +28,35 @@
       href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i"
       rel="stylesheet"
     />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_3Zrcs6awJNHxwS1tPH3Hd");
+      })();
+    </script>
 
     <title>Yamii Home Cooking</title>
   </head>
 
   <body>
-      <header>
-        <h1 class="site-heading text-center text-white d-none d-lg-block">
-            <span class="site-heading-upper text-primary mb-3"
-        >lets cook together</span
-            >
-            <span class="site-heading-lower">yamii home cooking</span>
-        </h1>
-        <!-- Navigation page-->
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <header>
+      <h1 class="site-heading text-center text-white d-none d-lg-block">
+        <span class="site-heading-upper text-primary mb-3"
+          >lets cook together</span
+        >
+        <span class="site-heading-lower">yamii home cooking</span>
+      </h1>
+      <!-- Navigation page-->
+      <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
         <div class="container">
-            <button
+          <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -51,95 +64,74 @@
             aria-controls="navbarResponsive"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            >
+          >
             <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item active px-lg-1">
+              <li class="nav-item active px-lg-1">
                 <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('index')}}"
-                    >Home
-                    <span class="sr-only">(current)</span>
+                  class="nav-link text-uppercase text-expanded"
+                  href="{{ url_for('index')}}"
+                  >Home
+                  <span class="sr-only">(current)</span>
                 </a>
-                </li>
-                <li class="nav-item px-lg-1">
+              </li>
+              <li class="nav-item px-lg-1">
                 <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('recipes')}}"
-                    >recipes</a
+                  class="nav-link text-uppercase text-expanded"
+                  href="{{ url_for('recipes')}}"
+                  >recipes</a
                 >
-                </li>
-                <li class="nav-item px-lg-1">
+              </li>
+              <li class="nav-item px-lg-1">
                 <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('add_recipe')}}"
-                    >add recipes</a
+                  class="nav-link text-uppercase text-expanded"
+                  href="{{ url_for('add_recipe')}}"
+                  >add recipes</a
                 >
-                </li>
-                <li class="nav-item px-lg-1">
+              </li>
+              <li class="nav-item px-lg-1">
                 <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('shop')}}"
-                    >Products</a
+                  class="nav-link text-uppercase text-expanded"
+                  href="{{ url_for('shop')}}"
+                  >Products</a
                 >
-                </li>
-                <li class="nav-item px-lg-1">
+              </li>
+              <li class="nav-item px-lg-1">
                 <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('shopping_cart')}}"
-                    >shopping cart</a
+                  class="nav-link text-uppercase text-expanded"
+                  href="{{ url_for('shopping_cart')}}"
+                  >shopping cart</a
                 >
-                </li>
-                <li class="nav-item px-lg-1">
+              </li>
+              <li class="nav-item px-lg-1">
                 <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('subscription')}}"
-                    >subscribe/contact</a
+                  class="nav-link text-uppercase text-expanded"
+                  href="{{ url_for('subscription')}}"
+                  >subscribe/contact</a
                 >
-                </li>
-                <li class="nav-item px-lg-1">
-                <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('register')}}"
-                    >register</a
-                >
-                </li>
-                <li class="nav-item px-lg-1">
-                <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('login')}}"
-                    >log in</a
-                >
-                </li>          
-                <li class="nav-item px-lg-1">
-                <a
-                    class="nav-link text-uppercase text-expanded"
-                    href="{{ url_for('profile', username=session['user']) }}"
-                    >profile</a
-                >
-                </li>     
+              </li>
             </ul>
-            </div>
+          </div>
         </div>
-        </nav>
-      </header>
-       
-       <!-- Main container-->
-      <main class="container-fluid">
-          {% block content %} {% endblock %}
-      </main>
+      </nav>
+    </header>
+
+    <!-- Main container-->
+    <main class="container-fluid">
+      {% block content %} {% endblock %}
+    </main>
 
     <!--Footer section -->
     <footer class="footer text-faded text-center py-5">
-        <!--<div class="row">
+      <!--<div class="row">
           <div class="col-12">
             <p class="m-0 small">Copyright &copy; Your Website 2020</p>
             https://startbootstrap.com/themes/business-casual/
           </div>
-        </div>  --> 
-        <div class="container">
+        </div>  -->
+      <div class="container">
         <div class="col-12">
           <ul class="social-links">
             <li class="list-inline-item">
@@ -161,9 +153,8 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a
-                href="{{ url_for('subscription')}}">
-                <i class="material-icons prefix " aria-hidden="true">contacts</i>
+              <a href="{{ url_for('subscription')}}">
+                <i class="material-icons prefix" aria-hidden="true">contacts</i>
                 <span class="sr-only">contacts</span>
               </a>
             </li>
@@ -175,11 +166,12 @@
     <!-- Bootstrap jquery -->
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    
+
     <!-- Materialize script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- extern js file-->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/email.js') }}"></script>
   </body>
 </html>
