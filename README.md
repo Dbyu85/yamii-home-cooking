@@ -26,7 +26,7 @@ Milestone3 code Institute
 
 ## Structure
 
-* The project have nine site:
+* The project have six site, frontend:
   
   ### Home page.
   ### recipes site
@@ -34,6 +34,9 @@ Milestone3 code Institute
   ### Products site.
   ### Shopping site.
   ### Subscribe and Contact site.
+  
+* Backend: This site are not available for the public.
+
   ### Register site.
   ### log in site.
   ### Profile site.
@@ -66,11 +69,17 @@ Milestone3 code Institute
     
   > Profile site.
 
-## Features
-
-* features
+## Features 
 
 * features to Implement
+  - Add regirster site, login, profile, functionality and access.
+   - Adding functionality to Products site.
+  - Adding functionality to Shopping site.
+  - Share functionality to Facebook and Instagrame
+  - Facebook and Instagram API
+  - Add image to recipe layout.
+  - Add functionality to Subscribe site.
+  
 
 ## Technologies Used
 
@@ -79,13 +88,24 @@ Milestone3 code Institute
 * Bootstrap / Bootstrap Themes
 * Python
 * MongoDB
-* Jquery
+* Jquery  
 
 ## Testing
 
+## Bugs
+  - Issue on Recipe file, Category is not display.
+  - Issue on Edit_recipe file, cant update and make change on MongoDB.
+  - Contact form functionality is not working:
+   
 ## Deployment
- - Project deployment [Yamii Home Cooking](https://yamii-home-cooking.herokuapp.com/)
 
+  Hosting platform:
+      GitHub.
+  Development platform:
+      Gitpod
+      
 ## Credit and Acknowledgements
 
-
+  * Code Institute
+  * Use of img unplash
+  * W3school
